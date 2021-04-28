@@ -4,11 +4,12 @@ import boto3
 import os
 
 
-#Interact with client
+# boto3 S3 initialization
 client = boto3.client('s3',
                        aws_access_key_id = access_key,
                        aws_secret_access_key = secret_access_key)
 
+#accessing local dir , with a file extension
 for file in os.listdir():
     if '.pdf' in file:
         upload_file_bucket = 'uploads3files'
